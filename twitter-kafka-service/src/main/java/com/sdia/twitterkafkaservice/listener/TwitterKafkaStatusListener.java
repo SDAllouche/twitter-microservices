@@ -6,11 +6,14 @@ import com.sdia.kafkaproducer.config.service.KafkaProducer;
 import com.sdia.twitterkafkaservice.transformer.TwitterStatusToAvroTransformer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 import twitter4j.Status;
 import twitter4j.StatusAdapter;
 
 @Component
+@ComponentScan(basePackages = "com.sdia.appconfigdata.config")
+@ComponentScan(basePackages = "com.sdia.kafkaproducer.config.service")
 public class TwitterKafkaStatusListener extends StatusAdapter {
 
     private static final Logger LOG = LoggerFactory.getLogger(TwitterKafkaStatusListener.class);
@@ -22,9 +25,6 @@ public class TwitterKafkaStatusListener extends StatusAdapter {
     private final TwitterStatusToAvroTransformer twitterStatusToAvroTransformer;
 
 
-    public TwitterKafkaStatusListener() {
-        this(null, null, null);
-    }
 
     public TwitterKafkaStatusListener(KafkaConfigData configData,
                                       KafkaProducer<Long, TwitterAvroModel> producer,
