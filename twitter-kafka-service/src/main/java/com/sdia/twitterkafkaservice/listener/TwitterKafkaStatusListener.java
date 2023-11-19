@@ -21,6 +21,11 @@ public class TwitterKafkaStatusListener extends StatusAdapter {
 
     private final TwitterStatusToAvroTransformer twitterStatusToAvroTransformer;
 
+
+    public TwitterKafkaStatusListener() {
+        this(null, null, null);
+    }
+
     public TwitterKafkaStatusListener(KafkaConfigData configData,
                                       KafkaProducer<Long, TwitterAvroModel> producer,
                                       TwitterStatusToAvroTransformer transformer) {
@@ -32,7 +37,7 @@ public class TwitterKafkaStatusListener extends StatusAdapter {
     @Override
     public void onStatus(Status status) {
         LOG.info("Received status text {} sending to kafka topic {}", status.getText(), kafkaConfigData.getTopicName());
-        //TwitterAvroModel twitterAvroModel = twitterStatusToAvroTransformer.getTwitterAvroModelFromStatus(status);
-        //kafkaProducer.send(kafkaConfigData.getTopicName(), twitterAvroModel.getUserId(), twitterAvroModel);
+        TwitterAvroModel twitterAvroModel = twitterStatusToAvroTransformer.getTwitterAvroModelFromStatus(status);
+        kafkaProducer.send(kafkaConfigData.getTopicName(), twitterAvroModel.getUserId(), twitterAvroModel);
     }
 }
