@@ -9,13 +9,19 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.sdia</groupId>
-    <artifactId>twitter-kafka-service</artifactId>
+    <artifactId>kafka-producer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>twitter-kafka-service</name>
-    <description>twitter-kafka-service</description>
+    <name>kafka-producer</name>
+    <description>kafka-producer</description>
     <properties>
         <java.version>17</java.version>
     </properties>
+    <repositories>
+        <repository>
+            <id>confluent</id>
+            <url>https://packages.confluent.io/maven/</url>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -27,23 +33,15 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.twitter4j/twitter4j-stream -->
         <dependency>
-            <groupId>org.twitter4j</groupId>
-            <artifactId>twitter4j-stream</artifactId>
-            <version>4.0.7</version>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/io.confluent/kafka-avro-serializer -->
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>com.sdia</groupId>
-            <artifactId>app-config-data</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>io.confluent</groupId>
+            <artifactId>kafka-avro-serializer</artifactId>
+            <version>5.3.0</version>
         </dependency>
 
     </dependencies>
