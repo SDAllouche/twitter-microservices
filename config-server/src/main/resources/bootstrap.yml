@@ -5,6 +5,13 @@ spring:
     config:
       server:
         git:
-          uri: file://Users/Shared/projects/microservices-demo/config-server-repository
+          uri: https://github.com/****/spring-cloud-config-server-repository
+          default-label: main
+          username: username
+          password: password
           clone-on-start: true
     fail-fast: true
+  security:
+    user:
+      name: name
+      password: password

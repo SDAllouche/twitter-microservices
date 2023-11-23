@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: twitter-kafka-service
+  profiles:
+    active: twitter_to_kafka
+  cloud:
+    config:
+      name: twitter-kafka-service,config-client
+      uri: http://localhost:8888
+      username: spring_cloud_user
+      password: springCloud_Pwd!
