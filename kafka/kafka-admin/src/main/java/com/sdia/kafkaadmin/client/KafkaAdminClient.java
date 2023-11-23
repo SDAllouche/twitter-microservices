@@ -24,6 +24,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
 
 @Component
+@ComponentScan(basePackages = {"com.sdia.kafkaadmin.config"})
 public class KafkaAdminClient {
 
     private static final Logger LOG = LoggerFactory.getLogger(KafkaAdminClient.class);
@@ -39,8 +40,8 @@ public class KafkaAdminClient {
     private final WebClient webClient;
 
 
-    public KafkaAdminClient(KafkaConfigData config,
-                            RetryConfigData retryConfigData,
+
+    public KafkaAdminClient(KafkaConfigData config, RetryConfigData retryConfigData,
                             AdminClient client,
                             RetryTemplate template,
                             WebClient webClient) {
