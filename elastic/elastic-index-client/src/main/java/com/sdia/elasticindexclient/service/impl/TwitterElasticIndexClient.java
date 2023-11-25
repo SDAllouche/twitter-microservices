@@ -34,7 +34,7 @@ public class TwitterElasticIndexClient implements ElasticIndexClient<TwitterInde
     }
 
     @Override
-    public List<IndexedObjectInformation> save(List<TwitterIndexModel> documents) {
+    public List<String> save(List<TwitterIndexModel> documents) {
         List<IndexQuery> indexQueries = elasticIndexUtil.getIndexQueries(documents);
         List<IndexedObjectInformation> documentIds = elasticsearchOperations.bulkIndex(
                 indexQueries,

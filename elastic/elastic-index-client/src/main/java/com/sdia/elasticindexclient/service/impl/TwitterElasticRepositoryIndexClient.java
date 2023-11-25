@@ -6,7 +6,6 @@ import com.sdia.elasticmodel.index.impl.TwitterIndexModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Primary;
-import org.springframework.data.elasticsearch.core.IndexedObjectInformation;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -25,7 +24,7 @@ public class TwitterElasticRepositoryIndexClient implements ElasticIndexClient<T
     }
 
     @Override
-    public List<IndexedObjectInformation> save(List<TwitterIndexModel> documents) {
+    public List<String> save(List<TwitterIndexModel> documents) {
         List<TwitterIndexModel> repositoryResponse =
                 (List<TwitterIndexModel>) twitterElasticsearchIndexRepository.saveAll(documents);
         List<String> ids = repositoryResponse.stream().map(TwitterIndexModel::getId).collect(Collectors.toList());
