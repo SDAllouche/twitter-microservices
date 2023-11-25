@@ -10,9 +10,10 @@
         <module name="kafka-admin" />
         <module name="config-server" />
         <module name="app-config-data" />
-        <module name="twitter-kafka-service" />
         <module name="kafka-model" />
+        <module name="kafka-consumer" />
         <module name="kafka-producer" />
+        <module name="twitter-kafka-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -25,6 +26,7 @@
       <module name="common-config" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="kafka-admin" options="-parameters" />
+      <module name="kafka-consumer" options="-parameters" />
       <module name="kafka-model" options="-parameters" />
       <module name="kafka-producer" options="-parameters" />
       <module name="twitter-kafka-service" options="-parameters" />

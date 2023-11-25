@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/../common-config/pom.xml" />
         <option value="$PROJECT_DIR$/../config-server/pom.xml" />
         <option value="$PROJECT_DIR$/config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/../kafka-consumer/pom.xml" />
       </list>
     </option>
   </component>
