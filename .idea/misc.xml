@@ -23,6 +23,10 @@
         <option value="$PROJECT_DIR$/../elastic-model/pom.xml" />
         <option value="$PROJECT_DIR$/../elastic-config/pom.xml" />
         <option value="$PROJECT_DIR$/../elastic-index-client/pom.xml" />
+        <option value="$PROJECT_DIR$/elastic/elastic-config/pom.xml" />
+        <option value="$PROJECT_DIR$/elastic/elastic-index-client/pom.xml" />
+        <option value="$PROJECT_DIR$/elastic/elastic-model/pom.xml" />
+        <option value="$PROJECT_DIR$/kafka/kafka-consumer/pom.xml" />
       </list>
     </option>
   </component>

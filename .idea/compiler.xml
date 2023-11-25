@@ -14,6 +14,7 @@
         <module name="elastic-config" />
         <module name="kafka-model" />
         <module name="kafka-elastic-service" />
+        <module name="kafka-consumer" />
         <module name="kafka-producer" />
         <module name="twitter-kafka-service" />
         <module name="elastic-model" />
@@ -21,7 +22,6 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common-config" target="17" />
-      <module name="kafka-consumer" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
