@@ -7,8 +7,5 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootTest
 class KafkaElasticServiceApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
 
 }

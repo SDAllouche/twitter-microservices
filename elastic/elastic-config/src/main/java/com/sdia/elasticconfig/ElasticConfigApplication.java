@@ -1,13 +1,13 @@
-package com.sdia.elasticmodel;
+package com.sdia.elasticconfig;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ElasticModelApplication {
+public class ElasticConfigApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ElasticModelApplication.class, args);
+        SpringApplication.run(ElasticConfigApplication.class, args);
     }
 
 }
